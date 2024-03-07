@@ -1,0 +1,10 @@
+@import url(variables.css);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.body-container{
+    height: 100vh;
+    background-color: var(--background);
+}
