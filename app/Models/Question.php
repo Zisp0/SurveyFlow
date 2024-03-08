@@ -4,12 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\questionType;
-use App\Models\Option;
 
 class Question extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
 
     public function questionType(){
         return $this->belongsTo(QuestionType::class);
@@ -17,5 +17,9 @@ class Question extends Model
 
     public function options(){
         return $this->hasMany(Option::class);
+    }
+
+    public function responses(){
+        return $this->hasMany(Response::class);
     }
 }

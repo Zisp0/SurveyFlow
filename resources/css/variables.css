@@ -1,9 +1,9 @@
 :root{
     --white : #FFFFFF;
     --black: #000000;
-    --IndianRed: #005187;
-    --LightCoral: #4d82bc;
-    --Salmon: #84b6f4;
-    --DarkSalmon: #c4dafa;
-    --background: #fcffff;
+    --active: #97FFC4;
+    --closed: #FFB296;
+    --modify: #FFC796;
+    --skyBlue: #84b6f4;
+    --lightCyan: #E8F1FF;
 }

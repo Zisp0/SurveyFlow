@@ -12,13 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('questions', function (Blueprint $table) {
-            $table->id('questionId');
-            $table->unsignedBigInteger('surveyId');
-            $table->foreign('surveyId')->references('surveyId')->on('surveys');
-            $table->string('questionText');
-            $table->unsignedBigInteger('questionTypeId');
-            $table->foreign('questionTypeId')->references('questionTypeId')->on('questionTypes');
-            $table->timestamps();
+            $table->id();
+            $table->unsignedBigInteger('survey_id');
+            $table->foreign('survey_id')->references('id')->on('surveys');
+            $table->string('question_text');
+            $table->unsignedBigInteger('question_type_id');
+            $table->foreign('question_type_id')->references('id')->on('questionTypes');
         });
     }
 

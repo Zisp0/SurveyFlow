@@ -6,5 +6,62 @@
 
 .body-container{
     height: 100vh;
-    background-color: var(--background);
+}
+
+.emphasis{
+    background-color: var(--lightCyan);
+}
+
+.inputForm{
+    border: 1px solid var(--black);
+}
+
+.inputForm:focus{
+    outline: none;
+    border: 1px solid var(--skyBlue)
+}
+
+.survey{
+    text-decoration: none;
+    background-color: var(--lightCyan);
+    border: 1px solid var(--black);
+}
+
+.submit, .blue{
+    background-color: var(--skyBlue);
+}
+
+.question{
+    @apply border shadow-md rounded-lg p-2 flex flex-col;
+}
+
+.active{
+    background-color: var(--active);
+}
+
+.closed{
+    background-color: var(--closed);
+}
+
+a.submit{
+    width: 6rem;
+    text-align: center;
+    border-radius: .5rem;
+    padding: .25rem;
+    margin-top: .5rem;
+}
+
+.backTo{
+    background-color:  var(--lightCyan);
+    display: flex;
+    width: 5rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+    margin: .5rem;
+}
+
+.modify{
+    background-color: var(--modify);
 }

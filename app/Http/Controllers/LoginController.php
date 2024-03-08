@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class LoginController extends Controller
 {
@@ -11,12 +12,12 @@ class LoginController extends Controller
     }
 
     public function login(Request $request){
-        $user = $request->input('user');
+        $user = Str::lower($request->input('user'));
         switch($user){
             case 'user':
-                return view('user');
+                return redirect('/user');
             case 'admin':
-                return view('admin');
+                return redirect('/admin');
             default:
                 return view('login', ['error' => true]);
         }
